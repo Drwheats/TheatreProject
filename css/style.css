@@ -1,0 +1,305 @@
+css/style.css
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-color: #ff5252;
+  display: grid;
+  place-items: center;
+}
+
+.container {
+  width: 770px;
+  background-color: #fff;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header #month {
+  color: #ff5252;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+button {
+  width: 75px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+}
+
+.header button {
+  background-color: #ff5252;
+}
+.weekdays {
+  width: 100%;
+  display: flex;
+  background-color: #2f3640;
+  font-size: 17px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.weekdays div {
+  width: 100px;
+  padding: 10px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#calendar {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.day {
+  width: 100px;
+  min-height: 100px;
+  height: fit-content;
+  padding: 10px;
+  cursor: pointer;
+  margin: 5px;
+  box-sizing: border-box;
+  box-shadow: 0px 0px 3px #cbd4c2;
+  color: #7f8fa6;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.day:hover {
+  background-color: rgba(112, 111, 211, 0.1);
+  color: #706fd3;
+}
+
+#currentDay {
+  background-color: #706fd3;
+  color: #fff;
+}
+
+.event {
+  font-size: 12px;
+  padding: 3px;
+  background-color: #3d3d3d;
+  color: #fff;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.event-HotDocs {
+  font-size: 12px;
+  padding: 3px;
+  background-color: #aebb00;
+  color: #fff;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.event-TIFF {
+  font-size: 12px;
+  padding: 3px;
+  background-color: #DDD618;
+  color: #000000;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.event-Revue {
+  font-size: 12px;
+  padding: 3px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.event-Paradise {
+  font-size: 12px;
+  padding: 3px;
+  background-color: #0069aa;
+  color: #fff;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.event-Carlton {
+  font-size: 12px;
+  padding: 3px;
+  background-color: #880808;
+  color: #fff;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.event-Front {
+  font-size: 12px;
+  padding: 3px;
+  background-color: #FF69B4;
+  color: #000000;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+.event.holiday {
+  background-color: palegreen;
+  color: #3d3d3d;
+}
+
+.plain {
+  cursor: default;
+  box-shadow: none;
+}
+
+#modal {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#addEvent,
+#viewEvent {
+  display: none;
+  width: 350px;
+  background-color: #fff;
+  padding: 25px;
+  position: absolute;
+  z-index: 20;
+}
+
+#addEvent h2,
+#viewEvent h2 {
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+#txtTitle {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: 1px solid #cbd4c2;
+  font-size: 16px;
+}
+
+#btnSave {
+  background-color: #2ed573;
+}
+
+.btnClose {
+  background-color: #2f3542;
+}
+
+#viewEvent p {
+  margin-bottom: 20px;
+}
+
+#btnDelete {
+  background-color: #ea2027;
+}
+
+.error {
+  border-color: #ea2027 !important;
+}
+
+ /* The sidebar menu */
+ .sidebar {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0;
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
+}
+
+/* The sidebar links */
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #fff;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidebar a:hover {
+  color: #FF69B4;
+}
+
+/* Position and style the close button (top right corner) */
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+} 
+
+.sideBarItem {
+  color: white;
+    text-decoration-thickness: 20px;
+  white-space: nowrap;
+  text-overflow: clip;
+  float: left;
+}
